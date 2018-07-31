@@ -1,0 +1,48 @@
+body{
+     background-image: url(http://img2.chinadaily.com.cn/images/201801/05/5a4ed68da31008cfb2e9aadc.jpeg);
+     /*background-image: url(../img/IMG_7683.JPG );*/
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail{
+    padding: 0;
+    
+}
+.thumbnail.caption{
+    width: 12px;
+}
+
+#del-camp{
+    display: inline;
+}
+
+.footer {
+   /*position: fixed;*/
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+   border-bottom:  0;
+}
+
+.footer2 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+   border-bottom:  0;
+}
+
+#padLeft{
+    padding-left:10px;
+}
+
+#registerColor{
+    color: white;
+}

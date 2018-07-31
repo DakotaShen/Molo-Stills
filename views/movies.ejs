@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<div class = "container">
+    <header class = "jumbotron">
+      <div class = "container">
+        <h2 class = "text-center">Welcome and share your beloved movie stills here :)</h2>
+        <p class = "text-center" > This is a website for film lovers. Enjoy  ---M. Shen</p>
+        <p class = "text-center">
+          <a class = "btn btn-lg btn-primary" href = "/movies/new"> Add New Stills </a>
+        </p>
+      </div>
+    </header>
+</div>
+
+<div class = "container">
+    <div class = "row" style = "display: flex; flex-wrap: wrap;">
+          <% for(var i = 0; i < movies.length; i++){ %>
+              <div class = "col-md-3 col-sm-6">
+                <div class = "thumbnail"> 
+                   <img src = "<%= movies[i].image %>">
+                   <h1 class = "text-center caption"> <%= movies[i].name %> </h1>
+                   <a href = "/movies/<%=movies[i]._id %>">More Info</a>
+                </div>
+              </div> 
+          <% } %>
+    </div>
+</div>
+
+<% include partials/footer %>

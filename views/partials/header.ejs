@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Molo Still</title>
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+         <link rel = "stylesheet" href = "/main.css">
+        <!--<style>-->
+        <!--  body {background: green}</style>-->
+    </head>
+    <body>
+
+        <nav class = "nav navbar-default">
+          <div class = "container-fluid">
+              <div class = "navbar-header">
+                <a href = "/" class = "navbar-brand">MoloStill</a>
+              </div>
+              <div class = "collapse navbar-collapse">
+                <ul class = "nav navbar-nav navbar-right">
+                  <% if(!currentUser){ %>
+                    <li><a href = "/signin"> Log in </a></li>
+                    <li><a href = "/register"> Sign up </a></li>
+                 <% }else{ %>
+                    <li><a href = "profile"> Signed in as <%= currentUser.username %> </a></li>
+                    <li><a href = "/signout"> Log out </a></li>
+                 <% } %>
+                </ul>
+              </div>
+          </div>
+        </nav>        
+     

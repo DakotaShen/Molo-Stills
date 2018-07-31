@@ -1,0 +1,62 @@
+<% include partials/header %>
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-3">
+            <hr>
+            <div class = "lead">
+                <li class = "list-group list-group-item active">Info 1</li>
+                <li class = "list-group list-group-item">Info 2</li>
+                <li class = "list-group list-group-item">Info 3</li>
+            </div>
+        </div>
+        <div class = "col-md-9">
+            <div class = "thumbnail">
+                <p>
+                  <img src = "<%= movie.image %>" >
+                </p>
+                    <!--<h4 class = "pull-right"> $9.99 / night</h4>-->
+                <h3 class = "caption text-center"><%= movie.name %></h3>
+                <h4 id = "padLeft"><%= movie.descrip %></h4>
+                 <p id = "padLeft">
+                    Updated by <em> <%= movie.username%> </em>
+                </p>
+                <% if(currentUser){ %>
+                   <% if(movie.userId.equals(currentUser._id)){ %>
+                        <div id = "padLeft">
+                            <a class = "btn btn-warning btn-xs" href = "/movies/<%=movie._id%>/edit">EDIT</a>
+                            <form id = "del-camp" action = "/movies/<%=movie._id%>?_method=DELETE" method = "POST">
+                                <button class = "btn btn-xs btn-danger">delete</button>
+                            </form>                            
+                        </div>
+
+                     <% } %>
+                  <% } %>
+            </div>
+            <div class = "well">
+                    <p>
+                        <% movie.comments.forEach(function(comment){ %>
+                          <p> 
+                          <!--<h4 class = "pull-right">-->
+                          <!--    10 days ago </h4>-->
+                          <strong> <%= comment.authorName%> </strong> 
+                          </p>
+                          <p><%= comment.text %>
+                          <% if(currentUser && comment.authorId.equals(currentUser._id)){ %>
+                          <form id = "del-camp" action = "/movies/<%=movie._id%>/delComment?_method=DELETE" method = "POST">
+                              <!--<input type="hidden" name="_method" value="delete"/>-->
+                              <!--<button class = "btn btn-danger btn-xs">delete</button>-->
+                          </form>
+                          <% } %>
+                          </p>
+                        <% }); %>
+                    </p>
+                    <p>
+                        <a class = "btn btn-primary" href = "/movies/<%= movie._id %>/comments/new">Leave Your Comments</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

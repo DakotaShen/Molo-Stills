@@ -1,0 +1,71 @@
+
+body{
+    background-color: black;
+    /*background-image: url(http://img2.chinadaily.com.cn/images/201801/05/5a4ed68da31008cfb2e9aadc.jpeg);*/
+}
+
+#landing-header {
+  z-index: 1; /* ele浮在其他元素上面 */
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+
+/*.slideshow { */
+/*  position: fixed;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  top: 0;*/
+/*  left: 0;*/
+  /*z-index: 0; */
+  /* ele浮在其他元素下面 */
+/*  list-style: none;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+/*.slideshow li { */
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  background-size: cover;*/
+/*  background-position: 50% 50%;*/
+/*  background-repeat: no-repeat;*/
+/*  opacity: 0;*/
+/*  z-index: 0;*/
+/*  animation: imageAnimation 50s linear infinite; */
+/*}*/
+
+/*@keyframes imageAnimation { */
+/*  0% { */
+/*    opacity: 0; */
+/*    animation-timing-function: ease-in;*/
+/*    background-image: url(http://i.imgur.com/K3mPv14.jpg) ;*/
+/*  }*/
+/*  10% {*/
+/*    opacity: 1;*/
+/*    animation-timing-function: ease-out;*/
+/*    background-image: url(http://i.imgur.com/SBEmFpv.jpg);*/
+/*  }*/
+/*  20% {*/
+/*    opacity: 1*/
+/*  }*/
+/*  30% {*/
+/*    opacity: 0*/
+/*  }*/
+/*}*/
