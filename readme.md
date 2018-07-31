@@ -1,3 +1,6 @@
+## Tools
+* See package.json
+
 ## Creat New Movies
 * a new ejs to GET the form
 * need body-parser to transfer form ele to js
